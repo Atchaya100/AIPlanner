@@ -6,7 +6,7 @@ app = FastAPI()
 
 origins = [
     "http://localhost:3000",
-    "http://127.0.0.1:3000"  # For local React app
+    "http://127.0.0.1:3000", # For local React app
     "https://sweet-twilight-f60d5f.netlify.app"
 ]
 
