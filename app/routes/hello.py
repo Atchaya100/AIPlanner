@@ -2,6 +2,11 @@ from fastapi import APIRouter
 
 router = APIRouter()
 
-@router.get("/", methods=["GET", "HEAD"])
+@router.get("/")
 def greet():
+    return {"message": "Hello from FastAPI on Mac!"}
+
+
+@router.head("/")
+def head_greet():
     return {"message": "Hello from FastAPI on Mac!"}
