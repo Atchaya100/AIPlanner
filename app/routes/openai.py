@@ -9,7 +9,7 @@ load_dotenv()
 router = APIRouter()
 # from groq import Groq
 
-
+token=os.environ.get("token")
 
 # client = Groq(
 #     api_key=os.environ.get("GROQ_API_KEY"),
@@ -57,7 +57,7 @@ async def ask_openai(data: PromptRequest):
                     ]
                 }
         headers = {
-            "Authorization": "Bearer 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",
+            "Authorization": f"Bearer {token}",
             "Content-Type": "application/json"
             }
         response = requests.request("POST", url, json=payload, headers=headers)
